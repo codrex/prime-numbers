@@ -38,21 +38,21 @@ describe('Prime numbers generator',function(){
 		it(`Should return [${returnValueFor50}] of prime numbers from 0 to 50`,function(){
 			assert.deepEqual(app.getPrime(50),returnValueFor50);  
 		    });
-		it(`Should [${returnValueFor100}]  of prime numbers from 0 to 100 `,function(){
+		it(`Should return [${returnValueFor100}] of prime numbers from 0 to 100 `,function(){
 			assert.deepEqual(app.getPrime(100),returnValueFor100);  
 		    });
-		it(`Should [${returnValueFor1000}] of prime numbers from 0 to 1000 `,function(){
+		it(`Should return [${returnValueFor1000}] of prime numbers from 0 to 1000 `,function(){
 			assert.deepEqual(app.getPrime(1000),returnValueFor1000);  
 		    });
 	});
 
         // test to handle invalid inputs
 	describe('handle invalid inputs',function(){
-		it('Should []  of prime numbers for string ',function(){
+		it('Should return [] of prime numbers for string ',function(){
 			assert.deepEqual(app.getPrime('1000'),[]);  
 		});
 
-		it('Should []  of prime numbers for undefined ',function(){
+		it('Should return [] of prime numbers for undefined ',function(){
 			assert.deepEqual(app.getPrime(undefined),[]);  
 		});
 	});
