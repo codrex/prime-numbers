@@ -59,11 +59,11 @@ describe('Prime numbers generator',function(){
 
         // test to handle floating inputs
 	describe('handle invalid inputs',function(){
-		it('Should return [2,3] of prime numbers for 4.4 ',function(){
+		it('Should return [2,3] of prime numbers from 0 to 4.4 ',function(){
 			assert.deepEqual(app.getPrime(4.4),[2,3]);  
 		});
 
-		it('Should return [2,3,5] of prime numbers for 4.9 ',function(){
+		it('Should return [2,3,5] of prime numbers from 0 to 4.9 ',function(){
 			assert.deepEqual(app.getPrime(4.9),[2,3,5]);  
 		});
 	});
