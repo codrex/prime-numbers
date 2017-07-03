@@ -28,20 +28,20 @@ describe('Prime numbers generator',function(){
 	describe('handle valid inputs greater than 2',function(){
 
 		it(`Should return [${returnValueFor2}] of prime numbers from 0 to 2`,function(){
-			assert.deepEqual(app.getPrime(0),[]);  
+			assert.deepEqual(app.getPrime(2),returnValueFor2);  
 		});
-		// it(`Should return [${returnValueFor5}] of prime numbers from 0 to 5`,function(){
-		// 	assert.deepEqual(app.getPrime(0),...returnValueFor5);  
-		// });
-		// it(`Should return [${returnValueFor50}] of prime numbers from 0 to 50`,function(){
-		// 	assert.deepEqual(app.getPrime(100),...returnValueFor50);  
-		// });
-		// it(`Should [${returnValueFor100}]  of prime numbers from 0 to 100 `,function(){
-		// 	assert.deepEqual(app.getPrime(100),...returnValueFor100);  
-		// });
-		// it(`Should [${returnValueFor1000}] of prime numbers from 0 to 1000 `,function(){
-		// 	assert.deepEqual(app.getPrime(1000),...returnValueFor1000);  
-		// });
+		it(`Should return [${returnValueFor5}] of prime numbers from 0 to 5`,function(){
+			assert.deepEqual(app.getPrime(5),returnValueFor5);  
+		});
+		it(`Should return [${returnValueFor50}] of prime numbers from 0 to 50`,function(){
+			assert.deepEqual(app.getPrime(50),returnValueFor50);  
+		});
+		it(`Should [${returnValueFor100}]  of prime numbers from 0 to 100 `,function(){
+			assert.deepEqual(app.getPrime(100),returnValueFor100);  
+		});
+		it(`Should [${returnValueFor1000}] of prime numbers from 0 to 1000 `,function(){
+			assert.deepEqual(app.getPrime(1000),returnValueFor1000);  
+		});
 	});
 
 	describe('handle invalid inputs',function(){
