@@ -26,6 +26,7 @@ let app = {
 		let arr = [];
         // check input type
 		if(typeof(number) ==='number'){
+			number = Math.round(number);
             // looping through numbers in the range of 2 to number(inputed number)
 			for(let index=2;index<=number;index++){
 
@@ -44,4 +45,4 @@ let app = {
 
 module.exports = app;
 
-
+console.log(app.getPrime(4.9));
