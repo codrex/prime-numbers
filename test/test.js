@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const app = require('../src/main.js');
 
- 
+
 const returnValueFor2 = [2]; 
 const returnValueFor5 = [2,3,5]; 
 const returnValueFor50 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]; 
@@ -12,6 +12,7 @@ const returnValueFor1000 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 
 
 describe('Prime numbers generator',function(){
 
+        // test to handle valid inputs lesser than zero
 	describe('handle valid inputs lesser than 2',function(){
 
 		it('Should return [] of prime numbers from 0 to 0',function(){
@@ -25,25 +26,27 @@ describe('Prime numbers generator',function(){
 		});
 	});
 
+        // test to handle valid inputs greater than zero
 	describe('handle valid inputs greater than 2',function(){
 
 		it(`Should return [${returnValueFor2}] of prime numbers from 0 to 2`,function(){
 			assert.deepEqual(app.getPrime(2),returnValueFor2);  
-		});
+		    });
 		it(`Should return [${returnValueFor5}] of prime numbers from 0 to 5`,function(){
 			assert.deepEqual(app.getPrime(5),returnValueFor5);  
-		});
+		    });
 		it(`Should return [${returnValueFor50}] of prime numbers from 0 to 50`,function(){
 			assert.deepEqual(app.getPrime(50),returnValueFor50);  
-		});
+		    });
 		it(`Should [${returnValueFor100}]  of prime numbers from 0 to 100 `,function(){
 			assert.deepEqual(app.getPrime(100),returnValueFor100);  
-		});
+		    });
 		it(`Should [${returnValueFor1000}] of prime numbers from 0 to 1000 `,function(){
 			assert.deepEqual(app.getPrime(1000),returnValueFor1000);  
-		});
+		    });
 	});
 
+        // test to handle invalid inputs
 	describe('handle invalid inputs',function(){
 		it('Should []  of prime numbers for string ',function(){
 			assert.deepEqual(app.getPrime('1000'),[]);  
